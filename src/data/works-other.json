@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "category": "Web",
+    "category": "Mobile",
     "name": "Rumorum: Real-Time Chat Platform",
     "desc": "A platform for real-time conversation and shared experience, developed with React and Firebase for web.",
     "tech1": "React",
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "category": "Web",
+    "category": "Mobile",
     "name": "Blinko: Real-Time Reaction Game",
     "desc": "A game for real-time timing and reaction-based mechanics, developed with React and Firebase for web.",
     "tech1": "React",
