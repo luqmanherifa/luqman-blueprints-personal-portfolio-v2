@@ -7,7 +7,7 @@
     "tech1": "React",
     "tech2": "Firebase",
     "css": "bg-fuchsia-400/10 text-fuchsia-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400",
-    "slug": "realtime-reaction-game",
+    "slug": "realtime-chat-platform",
     "link": "https://github.com/luqmanherifa/rumorum-realtime-chat-platform",
     "live": "https://rumorum.netlify.app",
     "image": "/works/rumorum.png"
