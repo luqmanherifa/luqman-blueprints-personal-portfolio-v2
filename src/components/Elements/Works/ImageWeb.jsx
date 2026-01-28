@@ -68,7 +68,9 @@ const ImageWeb = ({ images = [] }) => {
               <div
                 key={index}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? "w-6 bg-white" : "w-1.5 bg-white/50"
+                  index === activeIndex
+                    ? "w-4 bg-slate-600"
+                    : "w-1.5 bg-slate-600/40"
                 }`}
               />
             ))}
