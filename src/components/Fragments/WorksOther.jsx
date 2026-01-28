@@ -48,7 +48,7 @@ const WorksOther = () => {
                   <Name name={workOther.name} classname={workOther.css} />
                   <Desc desc={workOther.desc} classname={workOther.css} />
 
-                  <div className="flex items-center justify-between gap-3 border-t border-current pt-3">
+                  <div className="flex items-center justify-between gap-3 border-t border-current pt-3 dark:border-t-blue-400">
                     <Tech
                       tech1={workOther.tech1}
                       tech2={workOther.tech2}
