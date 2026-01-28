@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 const WorksOther = () => {
   const [showAll, setShowAll] = useState(false);
   const [renderAll, setRenderAll] = useState(false);
+
   useEffect(() => {
     if (showAll) {
       setRenderAll(true);
@@ -17,7 +18,6 @@ const WorksOther = () => {
       const timeout = setTimeout(() => {
         setRenderAll(false);
       }, 800);
-
       return () => clearTimeout(timeout);
     }
   }, [showAll]);
@@ -32,33 +32,43 @@ const WorksOther = () => {
             className={`flex max-w-5xl flex-wrap justify-center gap-7 overflow-hidden transition-all duration-700 ease-in-out sm:gap-5 ${
               showAll
                 ? "max-h-[4000px] sm:max-h-[5000px]"
-                : "max-h-[1500px] dark:max-h-[1550px] sm:max-h-[1600px] dark:sm:max-h-[1650px]"
+                : "max-h-[1600px] dark:max-h-[1600px] sm:max-h-[1690px] dark:sm:max-h-[1700px]"
             }`}
           >
             {displayedData.map((workOther) => (
-              <div key={workOther.id}>
+              <article
+                key={workOther.id}
+                className={`group w-full max-w-md overflow-hidden rounded-2xl transition-all duration-500 sm:max-w-[20rem] sm:rounded-xl ${workOther.css}`}
+              >
                 <Link to={`/explorations/${workOther.slug}`}>
                   <ImageOther image={workOther.image} />
                 </Link>
-                <div className="max-w-md sm:max-w-[20rem]">
-                  <Name classname={workOther.css} name={workOther.name} />
-                  <Desc classname={workOther.css} desc={workOther.desc} />
-                  <div className="flex justify-between">
+
+                <div className="relative p-5 sm:p-4">
+                  <Name name={workOther.name} classname={workOther.css} />
+                  <Desc desc={workOther.desc} classname={workOther.css} />
+
+                  <div className="flex items-center justify-between gap-3 border-t border-current pt-3">
                     <Tech
-                      classname={workOther.css}
                       tech1={workOther.tech1}
                       tech2={workOther.tech2}
+                      classname={workOther.css}
                     />
-                    <Url link={workOther.link} live={workOther.live} />
+                    <Url
+                      link={workOther.link}
+                      live={workOther.live}
+                      classname={workOther.css}
+                    />
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
+
         <div className="mt-7 flex justify-center">
           <button
-            className="rounded-lg bg-blue-700 px-4 py-2 text-xs font-medium text-slate-100 hover:bg-blue-800 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700"
+            className="rounded-lg bg-blue-700 px-4 py-2 text-xs font-medium text-slate-100 transition-colors hover:bg-blue-800 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "Show Less" : "Show More"}
