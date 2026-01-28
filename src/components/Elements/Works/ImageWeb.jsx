@@ -1,27 +1,23 @@
 import { useEffect, useState } from "react";
 
-const Image = ({ images = [] }) => {
+const ImageWeb = ({ images = [] }) => {
   const safeImages = images.length ? images : ["/works/uc.png"];
-
   const [activeIndex, setActiveIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
 
   useEffect(() => {
     if (!hovered || safeImages.length <= 1) return;
-
     setActiveIndex((prev) => (prev === 0 ? 1 : prev));
-
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % safeImages.length);
     }, 900);
-
     return () => clearInterval(interval);
   }, [hovered, safeImages.length]);
 
   return (
     <figure
-      className="group relative h-[336px] max-w-md overflow-hidden rounded-2xl transition-all duration-500 hover:scale-95 sm:h-[240px] sm:max-w-[20rem] sm:rounded-lg"
+      className="group relative h-[336px] w-full overflow-hidden rounded-t-2xl transition-all duration-500 sm:h-[240px] sm:rounded-t-xl"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => {
         setHovered(false);
@@ -48,7 +44,6 @@ const Image = ({ images = [] }) => {
           </svg>
         </div>
       )}
-
       <div className="relative h-full w-full overflow-hidden">
         {safeImages.map((src, index) => (
           <img
@@ -57,21 +52,31 @@ const Image = ({ images = [] }) => {
             alt=""
             onLoad={() => index === 0 && setImageLoading(false)}
             className={`
-              duration-400 absolute inset-0 w-full
+              duration-400 absolute inset-0 h-full w-full
               object-cover transition-all ease-out
               ${index === activeIndex ? "opacity-100" : "opacity-0"}
-              group-hover:rotate-3 group-hover:scale-125
+              group-hover:rotate-2 group-hover:scale-110
               ${imageLoading ? "opacity-0" : ""}
               dark:grayscale dark:hue-rotate-[180deg] dark:filter
-              sm:h-auto
             `}
           />
         ))}
 
-        <div className="pointer-events-none absolute inset-0 bg-blue-600 opacity-0 dark:opacity-20" />
+        {safeImages.length > 1 && (
+          <div className="absolute bottom-3 right-3 flex gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            {safeImages.map((_, index) => (
+              <div
+                key={index}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  index === activeIndex ? "w-6 bg-white" : "w-1.5 bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </figure>
   );
 };
 
-export default Image;
+export default ImageWeb;
