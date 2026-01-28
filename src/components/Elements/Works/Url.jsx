@@ -35,7 +35,7 @@ const Url = (props) => {
         href={live}
         target="_blank"
         rel="noreferrer"
-        className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all hover:text-slate-200 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700 dark:hover:opacity-100 ${colorClasses}`}
+        className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium transition-all hover:text-slate-200 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700 dark:hover:opacity-100 ${colorClasses}`}
         title="View Live"
       >
         <span>Live</span>
