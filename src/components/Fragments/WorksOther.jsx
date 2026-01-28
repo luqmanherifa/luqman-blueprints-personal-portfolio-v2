@@ -22,6 +22,22 @@ const WorksOther = () => {
     }
   }, [showAll]);
 
+  const extractBorderClass = (cssString) => {
+    const classes = cssString.split(" ");
+    const borderClass = classes.find(
+      (cls) =>
+        cls.startsWith("border-") &&
+        !cls.startsWith("border-t-") &&
+        !cls.startsWith("border-t ") &&
+        cls !== "border-t" &&
+        cls.includes("/"),
+    );
+
+    return borderClass
+      ? `border-t ${borderClass}`
+      : "border-t border-gray-300/40";
+  };
+
   const displayedData = renderAll ? WorksOtherData : WorksOtherData.slice(0, 6);
 
   return (
@@ -43,12 +59,14 @@ const WorksOther = () => {
                 <Link to={`/explorations/${workOther.slug}`}>
                   <ImageOther image={workOther.image} />
                 </Link>
-
                 <div className="relative p-5 sm:p-4">
                   <Name name={workOther.name} classname={workOther.css} />
                   <Desc desc={workOther.desc} classname={workOther.css} />
-
-                  <div className="flex items-center justify-between gap-3 border-t border-current pt-3 dark:border-t-blue-400">
+                  <div
+                    className={`flex items-center justify-between gap-3 pt-3 dark:border-blue-400 ${extractBorderClass(
+                      workOther.css,
+                    )}`}
+                  >
                     <Tech
                       tech1={workOther.tech1}
                       tech2={workOther.tech2}
@@ -65,7 +83,6 @@ const WorksOther = () => {
             ))}
           </div>
         </div>
-
         <div className="mt-7 flex justify-center">
           <button
             className="rounded-lg bg-blue-700 px-4 py-2 text-xs font-medium text-slate-100 transition-colors hover:bg-blue-800 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700"
