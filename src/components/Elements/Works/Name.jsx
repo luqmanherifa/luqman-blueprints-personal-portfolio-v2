@@ -1,10 +1,17 @@
 const Name = (props) => {
   const { name, classname } = props;
+  const textColorClasses = classname
+    .split(" ")
+    .filter((cls) => cls.startsWith("text-") || cls.startsWith("dark:text-"))
+    .join(" ");
+
   return (
-    <div
-      className={`mt-2 w-[28rem] rounded-lg py-2 px-3 text-sm font-medium sm:w-[20rem] ${classname}`}
-    >
-      <p className="line-clamp-1">{name}</p>
+    <div className="relative mb-3">
+      <h3
+        className={`text-base font-medium leading-tight line-clamp-1 ${textColorClasses}`}
+      >
+        {name}
+      </h3>
     </div>
   );
 };
