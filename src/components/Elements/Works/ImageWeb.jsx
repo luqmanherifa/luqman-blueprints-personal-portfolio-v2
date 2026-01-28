@@ -55,7 +55,7 @@ const ImageWeb = ({ images = [] }) => {
               duration-400 absolute inset-0 h-full w-full
               object-cover transition-all ease-out
               ${index === activeIndex ? "opacity-100" : "opacity-0"}
-              group-hover:rotate-2 group-hover:scale-110
+              group-hover:rotate-2 group-hover:scale-125
               ${imageLoading ? "opacity-0" : ""}
               dark:grayscale dark:hue-rotate-[180deg] dark:filter
             `}
