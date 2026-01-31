@@ -6,7 +6,7 @@
     "desc": "A portal for discovering daily local gathering spots around the city, developed with React and Firebase for web.",
     "tech1": "React",
     "tech2": "Firebase",
-    "css": "bg-amber-400/10 text-amber-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-amber-400/40",
+    "css": "bg-emerald-400/10 text-emerald-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-emerald-400/40",
     "slug": "tikumsu-daily-hangout-spots",
     "link": "https://github.com/luqmanherifa/tikumsu-daily-hangout-spots",
     "live": "https://tikumsu.netlify.app",
@@ -37,6 +37,19 @@
     "link": "https://github.com/luqmanherifa/blinko-realtime-reaction-game",
     "live": "https://blinkko.netlify.app",
     "image": "/works/blinko.png"
+  },
+  {
+    "id": 3,
+    "category": "Mobile",
+    "name": "Antra: Decision Trade-off Assistant",
+    "desc": "A tool for structured decision trade-off comparison and impact reflection, developed with React and Vite for web.",
+    "tech1": "React",
+    "tech2": "Vite",
+    "css": "bg-amber-400/10 text-amber-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-amber-400/40",
+    "slug": "antra-decision-tradeoff-assistant",
+    "link": "https://github.com/luqmanherifa/antra-decision-tradeoff-assistant",
+    "live": "https://antraa.netlify.app",
+    "image": "/works/antra.png"
   },
   {
     "id": 4,
