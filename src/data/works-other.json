@@ -106,15 +106,15 @@
   {
     "id": 9,
     "category": "Journey",
-    "name": "Algorithm Learning Journey",
+    "name": "DSA Learning Journey",
     "desc": "A journey for exploring algorithm projects and improving problem-solving skills through coding challenges.",
     "tech1": "JavaScript",
     "tech2": "SQL",
     "css": "bg-gray-300/10 text-gray-300 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-gray-300/40",
-    "slug": "algorithm-learning-journey",
-    "link": "https://github.com/luqmanherifa/algorithm-learning-journey",
+    "slug": "dsa-learning-journey",
+    "link": "https://github.com/luqmanherifa/dsa-learning-journey",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeyalgo.png"
+    "image": "/works/journeydsa.png"
   },
   {
     "id": 10,
