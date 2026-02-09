@@ -85,7 +85,11 @@ const WorksWeb = () => {
         </div>
         <div className="mt-7 flex justify-center">
           <button
-            className="rounded-lg bg-blue-700 px-4 py-2 text-xs font-medium text-slate-100 transition-colors hover:bg-blue-800 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700"
+            className={`rounded-lg px-4 py-2 text-xs font-medium text-slate-100 transition-colors ${
+              showAll
+                ? "bg-slate-600 hover:bg-slate-700 dark:border dark:border-slate-400 dark:bg-slate-700 dark:hover:bg-slate-600"
+                : "bg-blue-700 hover:bg-blue-800 dark:border dark:border-blue-400 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-blue-700"
+            }`}
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "Show Less" : "Show More"}

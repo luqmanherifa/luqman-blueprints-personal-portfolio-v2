@@ -107,20 +107,23 @@ const Journal = () => {
               </div>
             </div>
 
-            <a
-              href="https://whatwasntwritten.com"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <div>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ x: [-150, 0], opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="text-center text-base text-blue-400 hover:text-blue-500 hover:underline dark:text-blue-100 dark:hover:text-blue-300"
+                className="text-center text-base"
               >
-                whatwasntwritten.com
+                <a
+                  href="https://whatwasntwritten.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-500 hover:underline dark:text-blue-100 dark:hover:text-blue-300"
+                >
+                  whatwasntwritten.com
+                </a>
               </motion.p>
-            </a>
+            </div>
           </div>
         </motion.div>
       </div>
