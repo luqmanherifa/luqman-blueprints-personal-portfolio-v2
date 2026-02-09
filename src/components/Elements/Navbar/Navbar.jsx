@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -110,20 +110,40 @@ const Navbar = () => {
             className="flex items-center"
           >
             <button
-              className="transition duration-500 ease-in-out"
+              className="relative flex h-5 w-6 items-center justify-center"
               onClick={handleThemeSwitch}
             >
-              {theme === "dark" ? (
-                <FontAwesomeIcon
-                  icon={faMoon}
-                  className="w-5 transform text-base hover:text-blue-300"
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={faSun}
-                  className="w-5 transform text-base hover:text-yellow-400"
-                />
-              )}
+              <AnimatePresence mode="wait">
+                {theme === "dark" ? (
+                  <motion.div
+                    key="moon"
+                    initial={{ rotate: -180, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: 180, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="absolute"
+                  >
+                    <FontAwesomeIcon
+                      icon={faMoon}
+                      className="w-5 text-base hover:text-blue-300"
+                    />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="sun"
+                    initial={{ rotate: 180, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: -180, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="absolute"
+                  >
+                    <FontAwesomeIcon
+                      icon={faSun}
+                      className="w-5 text-base hover:text-yellow-400"
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </button>
           </motion.div>
         </nav>
@@ -182,20 +202,40 @@ const Navbar = () => {
                   className="flex items-center"
                 >
                   <button
-                    className="transition duration-500 ease-in-out"
+                    className="relative flex h-5 w-6 items-center justify-center"
                     onClick={handleThemeSwitch}
                   >
-                    {theme === "dark" ? (
-                      <FontAwesomeIcon
-                        icon={faMoon}
-                        className="w-5 transform text-base hover:text-slate-400 dark:hover:text-blue-300"
-                      />
-                    ) : (
-                      <FontAwesomeIcon
-                        icon={faSun}
-                        className="w-5 transform text-base hover:text-slate-300"
-                      />
-                    )}
+                    <AnimatePresence mode="wait">
+                      {theme === "dark" ? (
+                        <motion.div
+                          key="moon-mobile"
+                          initial={{ rotate: -180, scale: 0, opacity: 0 }}
+                          animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                          exit={{ rotate: 180, scale: 0, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: "easeInOut" }}
+                          className="absolute"
+                        >
+                          <FontAwesomeIcon
+                            icon={faMoon}
+                            className="w-5 text-base hover:text-slate-400 dark:hover:text-blue-300"
+                          />
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key="sun-mobile"
+                          initial={{ rotate: 180, scale: 0, opacity: 0 }}
+                          animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                          exit={{ rotate: -180, scale: 0, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: "easeInOut" }}
+                          className="absolute"
+                        >
+                          <FontAwesomeIcon
+                            icon={faSun}
+                            className="w-5 text-base hover:text-slate-300"
+                          />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </button>
                 </motion.div>
               </div>
