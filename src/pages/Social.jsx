@@ -47,24 +47,24 @@ const Social = () => {
                   return (
                     <tr
                       key={social.id}
-                      className="border-t border-slate-700 dark:border-blue-400"
+                      className="group border-t border-slate-700 dark:border-blue-400"
                     >
-                      <td className="px-9 py-5 sm:px-4">
+                      <td className="sm:px-0">
                         <a
                           href={social.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="block"
+                          className="block px-9 py-5 sm:px-4"
                         >
                           {social.social}
                         </a>
                       </td>
-                      <td className="px-3 py-5 text-blue-400 hover:text-blue-500 dark:text-blue-100 dark:hover:text-blue-300 sm:px-1">
+                      <td className="text-blue-400 group-hover:text-blue-500 dark:text-blue-100 dark:group-hover:text-blue-300 sm:px-0">
                         <a
                           href={social.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="block hover:underline"
+                          className="block px-3 py-5 group-hover:underline sm:px-1"
                         >
                           {social.display}
                         </a>
