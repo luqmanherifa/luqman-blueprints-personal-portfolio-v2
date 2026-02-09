@@ -5,7 +5,7 @@ import Title from "../components/Elements/Title/Title";
 
 const Social = () => {
   const [copiedId, setCopiedId] = useState(null);
-  const [hoveredIconId, setHoveredIconId] = useState(null);
+  const [setHoveredIconId] = useState(null);
 
   useEffect(() => {
     document.title = "Luqman Socials";
