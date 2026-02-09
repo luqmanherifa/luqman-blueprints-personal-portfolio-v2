@@ -49,13 +49,22 @@ const Social = () => {
                       key={social.id}
                       className="border-t border-slate-700 dark:border-blue-400"
                     >
-                      <td className="px-9 py-5 sm:px-4">{social.social}</td>
+                      <td className="px-9 py-5 sm:px-4">
+                        <a
+                          href={social.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="block"
+                        >
+                          {social.social}
+                        </a>
+                      </td>
                       <td className="px-3 py-5 text-blue-400 hover:text-blue-500 dark:text-blue-100 dark:hover:text-blue-300 sm:px-1">
                         <a
                           href={social.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="hover:underline"
+                          className="block hover:underline"
                         >
                           {social.display}
                         </a>
