@@ -11,7 +11,7 @@ const Journal = () => {
   const [imageLoading, setImageLoading] = useState(true);
 
   return (
-    <section className="pb-16 sm:pb-5">
+    <section className="pb-16 sm:pb-10">
       <div>
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-center pt-9 xl:max-w-4xl lg:max-w-xl md:max-w-lg sm:max-w-xs sm:pt-9">
           <Title
