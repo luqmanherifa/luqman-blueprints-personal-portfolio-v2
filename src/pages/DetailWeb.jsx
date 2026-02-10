@@ -35,7 +35,8 @@ const DetailWeb = () => {
 
     const interval = setInterval(() => {
       setActiveImage((prev) => {
-        const nextIndex = (prev + 1) % selectedObject.images.length;
+        const nextIndex =
+          (prev + 1) % Math.min(selectedObject.images.length, 5);
         setImageLoading(true);
         return nextIndex;
       });
@@ -114,8 +115,8 @@ const DetailWeb = () => {
                   />
                 </figure>
 
-                <div className="mt-4 flex gap-3 overflow-x-auto">
-                  {selectedObject.images.map((img, index) => {
+                <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
+                  {selectedObject.images.slice(0, 5).map((img, index) => {
                     const isActive = index === activeImage;
                     const isLoaded = loadedThumbs[index];
 
@@ -129,15 +130,21 @@ const DetailWeb = () => {
                             setActiveImage(index);
                           }
                         }}
-                        whileHover={{ scale: isActive ? 1 : 0.98 }}
-                        animate={{ scale: isActive ? 1 : 0.94 }}
-                        transition={{ duration: 0.18, ease: "easeOut" }}
-                        className="relative h-20 w-28 cursor-pointer overflow-hidden rounded-xl bg-slate-500 dark:bg-slate-400"
+                        whileHover={{ scale: isActive ? 1 : 1.02 }}
+                        animate={{ scale: isActive ? 1 : 0.96 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className={`relative aspect-[4/3] w-24 flex-shrink-0 cursor-pointer overflow-hidden rounded-lg border-2 transition-colors ${
+                          isActive
+                            ? "border-slate-300 dark:border-blue-400"
+                            : "border-transparent"
+                        }`}
                       >
+                        <div className="absolute inset-0 bg-slate-300 dark:bg-blue-900/40" />
+
                         {!isLoaded && (
                           <div className="absolute inset-0 flex items-center justify-center">
                             <svg
-                              className="h-4 w-4 animate-spin text-slate-700 dark:text-slate-600"
+                              className="h-5 w-5 animate-spin text-slate-600 dark:text-blue-400"
                               viewBox="0 0 24 24"
                               fill="currentColor"
                             >
@@ -146,27 +153,32 @@ const DetailWeb = () => {
                           </div>
                         )}
 
-                        <motion.img
-                          src={img}
-                          alt={`Preview ${index + 1}`}
-                          onLoad={() =>
-                            setLoadedThumbs((prev) => ({
-                              ...prev,
-                              [index]: true,
-                            }))
-                          }
-                          className="h-full w-full object-cover"
+                        <motion.div
+                          className="relative h-full w-full"
                           animate={{
-                            opacity: isLoaded ? (isActive ? 1 : 0.5) : 0,
-                            filter: isActive
-                              ? "brightness(1)"
-                              : "brightness(0.8)",
+                            opacity: isLoaded ? 1 : 0,
                           }}
-                          transition={{
-                            duration: 0.18,
-                            ease: "easeOut",
-                          }}
-                        />
+                          transition={{ duration: 0.2 }}
+                        >
+                          <img
+                            src={img}
+                            alt={`Preview ${index + 1}`}
+                            onLoad={() =>
+                              setLoadedThumbs((prev) => ({
+                                ...prev,
+                                [index]: true,
+                              }))
+                            }
+                            className="h-full w-full object-cover"
+                          />
+                          <motion.div
+                            className="dark:bg-blue-950 absolute inset-0 bg-slate-900"
+                            animate={{
+                              opacity: isActive ? 0 : 0.5,
+                            }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                          />
+                        </motion.div>
                       </motion.button>
                     );
                   })}
