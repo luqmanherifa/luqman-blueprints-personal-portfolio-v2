@@ -120,14 +120,14 @@
   {
     "id": 10,
     "category": "Journey",
-    "name": "College Learning Journey",
-    "desc": "A collection documenting college projects developed during studies for academic requirements and exploration.",
-    "tech1": "Java",
-    "tech2": "PHP",
+    "name": "AI Learning Journey",
+    "desc": "A collection experimenting with AI projects to build hands-on experience through practical exploration.",
+    "tech1": "Python",
+    "tech2": "OpenCV",
     "css": "bg-gray-300/10 text-gray-300 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-gray-300/40",
-    "slug": "college-learning-journey",
-    "link": "https://github.com/luqmanherifa/college-learning-journey",
+    "slug": "ai-learning-journey",
+    "link": "https://github.com/luqmanherifa/ai-learning-journey",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeycollege.png"
+    "image": "/works/journeyai.png"
   }
 ]
