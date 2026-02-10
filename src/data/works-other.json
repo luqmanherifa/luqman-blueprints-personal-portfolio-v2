@@ -14,17 +14,18 @@
   },
   {
     "id": 2,
-    "category": "Mobile",
-    "name": "Rumorum: Real-Time Chat Platform",
-    "desc": "A platform for real-time conversation and shared social experience, developed with React and Firebase for web.",
+    "category": "Web",
+    "name": "Kreta: Creative Artisan Platform",
+    "desc": "A platform for connecting creators and clients through creative work, developed with Go, PostgreSQL, and Docker for web.",
     "tech1": "React",
-    "tech2": "Firebase",
-    "css": "bg-fuchsia-400/10 text-fuchsia-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-fuchsia-400/40",
-    "slug": "rumorum-realtime-chat-platform",
-    "link": "https://github.com/luqmanherifa/rumorum-realtime-chat-platform",
-    "live": "https://rumorum.netlify.app",
-    "image": "/works/rumorum.png"
+    "tech2": "Go",
+    "css": "bg-indigo-400/10 text-indigo-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-indigo-400/40",
+    "slug": "kreta-creative-artisan-platform",
+    "link": "https://github.com/luqmanherifa/kreta-creative-artisan-platform",
+    "live": "https://www.linkedin.com/in/luqmanherifa",
+    "image": "/works/kreta.png"
   },
+
   {
     "id": 3,
     "category": "Mobile",
@@ -41,6 +42,19 @@
   {
     "id": 4,
     "category": "Mobile",
+    "name": "Rumorum: Real-Time Chat Platform",
+    "desc": "A platform for real-time conversation and shared social experience, developed with React and Firebase for web.",
+    "tech1": "React",
+    "tech2": "Firebase",
+    "css": "bg-fuchsia-400/10 text-fuchsia-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-fuchsia-400/40",
+    "slug": "rumorum-realtime-chat-platform",
+    "link": "https://github.com/luqmanherifa/rumorum-realtime-chat-platform",
+    "live": "https://rumorum.netlify.app",
+    "image": "/works/rumorum.png"
+  },
+  {
+    "id": 5,
+    "category": "Mobile",
     "name": "Antra: Decision Trade-off Assistant",
     "desc": "A tool for structured decision trade-off comparison and impact reflection, developed with React and JavaScript for web.",
     "tech1": "React",
@@ -52,7 +66,7 @@
     "image": "/works/antra.png"
   },
   {
-    "id": 5,
+    "id": 6,
     "category": "Mobile",
     "name": "The Midnight Letter: Interactive Reflection Narrative",
     "desc": "A flow for structured self-reflection and emotional processing, developed with React, Redux, and Gemini API for web.",
@@ -65,7 +79,20 @@
     "image": "/works/themidnightletter.png"
   },
   {
-    "id": 6,
+    "id": 7,
+    "category": "Web",
+    "name": "Wordium: Writing Ideas Platform",
+    "desc": "A platform for sharing stories and posts for writing communities, developed with Blade and Laravel for web.",
+    "tech1": "Blade",
+    "tech2": "Laravel",
+    "css": "bg-blue-400/10 text-blue-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-blue-400/40",
+    "slug": "wordium-writing-ideas-platform",
+    "link": "https://github.com/luqmanherifa/wordium-writing-ideas-platform",
+    "live": "https://www.linkedin.com/in/luqmanherifa",
+    "image": "/works/wordium.png"
+  },
+  {
+    "id": 8,
     "category": "Web",
     "name": "Savora: Culinary Discovery Spot",
     "desc": "A portal for discovering restaurants and menus recommendations, developed with React and Laravel for web.",
@@ -78,7 +105,7 @@
     "image": "/works/savora.png"
   },
   {
-    "id": 7,
+    "id": 9,
     "category": "Journey",
     "name": "Web Learning Journey",
     "desc": "A collection documenting web projects built after graduation through real-world experimentation.",
@@ -91,7 +118,7 @@
     "image": "/works/journeyweb.png"
   },
   {
-    "id": 8,
+    "id": 10,
     "category": "Journey",
     "name": "College Learning Journey",
     "desc": "A collection documenting college projects developed during studies for academic requirements and exploration.",
@@ -102,31 +129,5 @@
     "link": "https://github.com/luqmanherifa/college-learning-journey",
     "live": "https://www.linkedin.com/in/luqmanherifa",
     "image": "/works/journeycollege.png"
-  },
-  {
-    "id": 9,
-    "category": "Journey",
-    "name": "DSA Learning Journey",
-    "desc": "A collection exploring DSA projects to improve problem-solving skills through coding challenges.",
-    "tech1": "JavaScript",
-    "tech2": "SQL",
-    "css": "bg-gray-300/10 text-gray-300 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-gray-300/40",
-    "slug": "dsa-learning-journey",
-    "link": "https://github.com/luqmanherifa/dsa-learning-journey",
-    "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeydsa.png"
-  },
-  {
-    "id": 10,
-    "category": "Journey",
-    "name": "AI Learning Journey",
-    "desc": "A collection experimenting with AI projects to build hands-on experience through practical exploration.",
-    "tech1": "Python",
-    "tech2": "OpenCV",
-    "css": "bg-gray-300/10 text-gray-300 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-gray-300/40",
-    "slug": "ai-learning-journey",
-    "link": "https://github.com/luqmanherifa/ai-learning-journey",
-    "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeyai.png"
   }
 ]
