@@ -25,7 +25,7 @@ const Works = () => {
               className="text-center text-base text-slate-400 dark:text-blue-100"
             >
               Here’s a glimpse of what I’ve worked on — projects shaping
-              people’s lives and leaving impact.
+              people’s lives and impact.
             </motion.p>
           </div>
           <motion.div

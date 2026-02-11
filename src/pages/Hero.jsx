@@ -6,21 +6,38 @@ const Hero = () => {
     document.title = "Luqman Blueprints";
   }, []);
 
-  const mantra = "I quietly build things. ";
+  const mantra = "I quietly build things.";
   const repeatCount = 4;
-  const fullText = mantra.repeat(repeatCount);
 
   const [displayedText, setDisplayedText] = useState("");
+  const [currentIteration, setCurrentIteration] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setDisplayedText(fullText.slice(0, index + 1));
-      index++;
-      if (index === fullText.length) clearInterval(interval);
-    }, 50);
-    return () => clearInterval(interval);
-  }, [fullText]);
+    if (currentIteration >= repeatCount) return;
+
+    const typingSpeed = 80;
+    const pauseBetweenLines = 300;
+
+    const timeout = setTimeout(() => {
+      if (charIndex < mantra.length) {
+        setDisplayedText((prev) => prev + mantra[charIndex]);
+        setCharIndex(charIndex + 1);
+      } else {
+        setTimeout(() => {
+          if (currentIteration === 1) {
+            setDisplayedText((prev) => prev + " \n");
+          } else {
+            setDisplayedText((prev) => prev + " ");
+          }
+          setCurrentIteration(currentIteration + 1);
+          setCharIndex(0);
+        }, pauseBetweenLines);
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, currentIteration, mantra]);
 
   return (
     <section className="pb-10 sm:pb-5">
@@ -50,8 +67,11 @@ const Hero = () => {
             transition={{ delay: 0 }}
             className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start"
           >
-            <p className="h-[3.5rem] w-[24rem] text-center text-lg text-slate-400 drop-shadow-sm dark:text-blue-100 sm:h-[7rem] sm:w-[12rem] sm:text-left">
+            <p className="h-[3.5rem] w-[24rem] whitespace-pre-wrap text-center text-lg text-slate-400 drop-shadow-sm dark:text-blue-100 sm:h-[7rem] sm:w-[12rem] sm:text-left">
               {displayedText}
+              {currentIteration < repeatCount && (
+                <span className="animate-pulse">|</span>
+              )}
             </p>
           </motion.div>
         </div>
