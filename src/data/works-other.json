@@ -10,7 +10,7 @@
     "slug": "tikumsu-daily-hangout-spots",
     "link": "https://github.com/luqmanherifa/tikumsu-daily-hangout-spots",
     "live": "https://tikumsu.netlify.app",
-    "image": "/works/tikumsu.png"
+    "images": ["/works/tikumsu.png", "/works/tikumsu-2.png"]
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "slug": "kreta-creative-artisan-platform",
     "link": "https://github.com/luqmanherifa/kreta-creative-artisan-platform",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/kreta.png"
+    "images": ["/works/kreta.png"]
   },
 
   {
@@ -37,7 +37,7 @@
     "slug": "blinko-realtime-reaction-game",
     "link": "https://github.com/luqmanherifa/blinko-realtime-reaction-game",
     "live": "https://blinkko.netlify.app",
-    "image": "/works/blinko.png"
+    "images": ["/works/blinko.png", "/works/blinko-2.png"]
   },
   {
     "id": 4,
@@ -50,7 +50,7 @@
     "slug": "rumorum-realtime-chat-platform",
     "link": "https://github.com/luqmanherifa/rumorum-realtime-chat-platform",
     "live": "https://rumorum.netlify.app",
-    "image": "/works/rumorum.png"
+    "images": ["/works/rumorum.png"]
   },
   {
     "id": 5,
@@ -63,7 +63,7 @@
     "slug": "antra-decision-tradeoff-assistant",
     "link": "https://github.com/luqmanherifa/antra-decision-tradeoff-assistant",
     "live": "https://antraa.netlify.app",
-    "image": "/works/antra.png"
+    "images": ["/works/antra.png"]
   },
   {
     "id": 6,
@@ -76,7 +76,7 @@
     "slug": "the-midnight-letter-interactive-reflection-narrative",
     "link": "https://github.com/luqmanherifa/the-midnight-letter-interactive-reflection-narrative",
     "live": "https://midnightletter.netlify.app",
-    "image": "/works/themidnightletter.png"
+    "images": ["/works/themidnightletter.png"]
   },
   {
     "id": 7,
@@ -89,7 +89,7 @@
     "slug": "wordium-writing-ideas-platform",
     "link": "https://github.com/luqmanherifa/wordium-writing-ideas-platform",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/wordium.png"
+    "images": ["/works/wordium.png"]
   },
   {
     "id": 8,
@@ -102,7 +102,7 @@
     "slug": "savora-culinary-discovery-spot",
     "link": "https://github.com/luqmanherifa/savora-culinary-discovery-spot",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/savora.png"
+    "images": ["/works/savora.png"]
   },
   {
     "id": 9,
@@ -115,7 +115,7 @@
     "slug": "web-learning-journey",
     "link": "https://github.com/luqmanherifa/web-learning-journey",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeyweb.png"
+    "images": ["/works/journeyweb.png"]
   },
   {
     "id": 10,
@@ -128,6 +128,6 @@
     "slug": "ai-learning-journey",
     "link": "https://github.com/luqmanherifa/ai-learning-journey",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "image": "/works/journeyai.png"
+    "images": ["/works/journeyai.png"]
   }
 ]

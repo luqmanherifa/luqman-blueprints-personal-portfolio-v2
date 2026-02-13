@@ -57,7 +57,7 @@ const WorksOther = () => {
                 className={`group w-full max-w-md overflow-hidden rounded-2xl transition-all duration-500 sm:max-w-[20rem] sm:rounded-xl ${workOther.css}`}
               >
                 <Link to={`/explorations/${workOther.slug}`}>
-                  <ImageOther image={workOther.image} />
+                  <ImageOther images={workOther.images} />
                 </Link>
                 <div className="relative p-5 sm:p-4">
                   <Name name={workOther.name} classname={workOther.css} />

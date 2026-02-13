@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 const DetailOther = () => {
   const [data, setData] = useState(null);
   const { slug } = useParams();
+  const [activeImage, setActiveImage] = useState(0);
   const [imageLoading, setImageLoading] = useState(true);
+  const [loadedThumbs, setLoadedThumbs] = useState({});
+  const [isManual, setIsManual] = useState(false);
 
   useEffect(() => {
     setData(jsonData);
@@ -19,6 +22,35 @@ const DetailOther = () => {
       document.title = selectedObject.name + " - Luqman Works";
     }
   }, [selectedObject]);
+
+  useEffect(() => {
+    if (selectedObject?.images?.length) {
+      setActiveImage(0);
+      setImageLoading(true);
+    }
+  }, [selectedObject]);
+
+  useEffect(() => {
+    if (!selectedObject?.images?.length || isManual) return;
+
+    const interval = setInterval(() => {
+      setActiveImage((prev) => {
+        const nextIndex =
+          (prev + 1) % Math.min(selectedObject.images.length, 5);
+        setImageLoading(true);
+        return nextIndex;
+      });
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [selectedObject, isManual]);
+
+  useEffect(() => {
+    if (!isManual) return;
+
+    const timeout = setTimeout(() => setIsManual(false), 6000);
+    return () => clearTimeout(timeout);
+  }, [isManual]);
 
   return (
     <motion.section
@@ -51,7 +83,7 @@ const DetailOther = () => {
               <div>
                 <figure className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl sm:h-auto sm:rounded-2xl">
                   {imageLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-200 dark:bg-slate-700">
+                    <div className="absolute inset-0 flex items-center justify-center bg-slate-200 dark:bg-slate-400">
                       <svg
                         aria-hidden="true"
                         className="h-12 w-12 animate-spin fill-blue-600 text-slate-200 dark:text-slate-600"
@@ -71,15 +103,86 @@ const DetailOther = () => {
                       <span className="sr-only">Loading...</span>
                     </div>
                   )}
-                  <img
-                    src={selectedObject.image}
-                    alt=""
+                  <motion.img
+                    key={selectedObject.images[activeImage]}
+                    src={selectedObject.images[activeImage]}
+                    alt={selectedObject.name}
                     onLoad={() => setImageLoading(false)}
-                    className={`transition-opacity duration-500 ${
-                      imageLoading ? "opacity-0" : "opacity-100"
-                    }`}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    className="h-full w-full object-cover"
                   />
                 </figure>
+
+                <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
+                  {selectedObject.images.slice(0, 5).map((img, index) => {
+                    const isActive = index === activeImage;
+                    const isLoaded = loadedThumbs[index];
+
+                    return (
+                      <motion.button
+                        key={img}
+                        onClick={() => {
+                          if (!isActive) {
+                            setIsManual(true);
+                            setImageLoading(true);
+                            setActiveImage(index);
+                          }
+                        }}
+                        whileHover={{ scale: isActive ? 1 : 1.02 }}
+                        animate={{ scale: isActive ? 1 : 0.96 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className={`relative aspect-[4/3] w-24 flex-shrink-0 cursor-pointer overflow-hidden rounded-lg border-2 transition-colors ${
+                          isActive
+                            ? "border-slate-300 dark:border-blue-400"
+                            : "border-transparent"
+                        }`}
+                      >
+                        <div className="absolute inset-0 bg-slate-300 dark:bg-blue-900/40" />
+
+                        {!isLoaded && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <svg
+                              className="h-5 w-5 animate-spin text-slate-600 dark:text-blue-400"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 017 7h-2a5 5 0 00-5-5V5z" />
+                            </svg>
+                          </div>
+                        )}
+
+                        <motion.div
+                          className="relative h-full w-full"
+                          animate={{
+                            opacity: isLoaded ? 1 : 0,
+                          }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <img
+                            src={img}
+                            alt={`Preview ${index + 1}`}
+                            onLoad={() =>
+                              setLoadedThumbs((prev) => ({
+                                ...prev,
+                                [index]: true,
+                              }))
+                            }
+                            className="h-full w-full object-cover"
+                          />
+                          <motion.div
+                            className="dark:bg-blue-950 absolute inset-0 bg-slate-900"
+                            animate={{
+                              opacity: isActive ? 0 : 0.5,
+                            }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                          />
+                        </motion.div>
+                      </motion.button>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-1.5">

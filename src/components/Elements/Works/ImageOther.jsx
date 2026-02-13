@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const ImageOther = (props) => {
-  const { image } = props;
+const ImageOther = ({ images = [] }) => {
+  const safeImages = images.length ? images : ["/works/uc.png"];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [hovered, setHovered] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
 
+  useEffect(() => {
+    if (!hovered || safeImages.length <= 1) return;
+    setActiveIndex((prev) => (prev === 0 ? 1 : prev));
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % safeImages.length);
+    }, 900);
+    return () => clearInterval(interval);
+  }, [hovered, safeImages.length]);
+
   return (
-    <figure className="group relative h-[336px] w-full overflow-hidden rounded-t-2xl transition-all duration-500 sm:h-[240px] sm:rounded-t-xl">
+    <figure
+      className="group relative h-[336px] w-full overflow-hidden rounded-t-2xl transition-all duration-500 sm:h-[240px] sm:rounded-t-xl"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => {
+        setHovered(false);
+        setActiveIndex(0);
+      }}
+    >
       {imageLoading && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-slate-200 dark:bg-slate-700">
           <svg
@@ -26,19 +44,38 @@ const ImageOther = (props) => {
           </svg>
         </div>
       )}
-      <div className="group relative h-full w-full overflow-hidden">
-        <img
-          src={image}
-          alt=""
-          onLoad={() => setImageLoading(false)}
-          className={`
-            duration-400 absolute inset-0 h-full w-full
-            object-cover transition-all ease-out
-            group-hover:rotate-2 group-hover:scale-125
-            ${imageLoading ? "opacity-0" : "opacity-100"}
-            dark:grayscale dark:hue-rotate-[180deg] dark:filter
-          `}
-        />
+      <div className="relative h-full w-full overflow-hidden">
+        {safeImages.map((src, index) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            onLoad={() => index === 0 && setImageLoading(false)}
+            className={`
+              duration-400 absolute inset-0 h-full w-full
+              object-cover transition-all ease-out
+              ${index === activeIndex ? "opacity-100" : "opacity-0"}
+              group-hover:rotate-2 group-hover:scale-125
+              ${imageLoading ? "opacity-0" : ""}
+              dark:grayscale dark:hue-rotate-[180deg] dark:filter
+            `}
+          />
+        ))}
+
+        {safeImages.length > 1 && (
+          <div className="absolute bottom-3 right-3 flex gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            {safeImages.map((_, index) => (
+              <div
+                key={index}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "w-4 bg-slate-600"
+                    : "w-1.5 bg-slate-600/40"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </figure>
   );
