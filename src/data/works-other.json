@@ -10,7 +10,13 @@
     "slug": "tikumsu-daily-hangout-spots",
     "link": "https://github.com/luqmanherifa/tikumsu-daily-hangout-spots",
     "live": "https://tikumsu.netlify.app",
-    "images": ["/works/tikumsu.png", "/works/tikumsu-2.png"]
+    "images": [
+      "/works/tikumsu.png",
+      "/works/tikumsu-2.png",
+      "/works/tikumsu-3.png",
+      "/works/tikumsu-4.png",
+      "/works/tikumsu-5.png"
+    ]
   },
   {
     "id": 2,
@@ -23,7 +29,13 @@
     "slug": "kreta-creative-artisan-platform",
     "link": "https://github.com/luqmanherifa/kreta-creative-artisan-platform",
     "live": "https://www.linkedin.com/in/luqmanherifa",
-    "images": ["/works/kreta.png"]
+    "images": [
+      "/works/kreta.png",
+      "/works/kreta-2.png",
+      "/works/kreta-3.png",
+      "/works/kreta-4.png",
+      "/works/kreta-5.png"
+    ]
   },
 
   {
