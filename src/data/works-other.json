@@ -24,7 +24,7 @@
     "name": "Kreta: Creative Artisan Platform",
     "desc": "A platform for connecting creators and clients through creative work, developed with Go, PostgreSQL, and Docker for web.",
     "tech1": "React",
-    "tech2": "Go",
+    "tech2": "Golang",
     "css": "bg-indigo-400/10 text-indigo-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-indigo-400/40",
     "slug": "kreta-creative-artisan-platform",
     "link": "https://github.com/luqmanherifa/kreta-creative-artisan-platform",
