@@ -48,14 +48,14 @@ const DetailWeb = () => {
     }, 3500);
 
     return () => clearInterval(interval);
-  }, [selectedObject, isManual]);
+  }, [selectedObject, isManual, activeImage]);
 
   useEffect(() => {
     if (!isManual) return;
 
-    const timeout = setTimeout(() => setIsManual(false), 6000);
+    const timeout = setTimeout(() => setIsManual(false), 3500);
     return () => clearTimeout(timeout);
-  }, [isManual]);
+  }, [isManual, activeImage]);
 
   return (
     <motion.section
