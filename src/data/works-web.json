@@ -2,12 +2,12 @@
   {
     "id": 1,
     "category": "Web",
-    "name": "Adi Data Informatika: Attendance Management System",
+    "name": "Adi Data Informatika: Employee Management System",
     "desc": "A system for tracking employee attendance, monitoring, approvals, history, and reports, developed with React and .NET for web.",
     "tech1": "React",
     "tech2": ".NET",
     "css": "bg-red-400/10 text-red-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-red-400/40",
-    "slug": "adi-data-informatika-attendance-management-system",
+    "slug": "adi-data-informatika-employee-management-system",
     "link": "https://github.com/luqmanherifa",
     "live": "https://www.linkedin.com/in/luqmanherifa",
     "images": ["/works/adidatainformatika.png"]
