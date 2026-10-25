@@ -39,7 +39,7 @@ const Journal = () => {
                 <div className="flex max-w-5xl flex-wrap justify-center gap-7 overflow-hidden transition-all duration-700 ease-in-out sm:gap-5">
                   <figure className="group relative h-[432px] w-[576px] max-w-xl overflow-hidden rounded-2xl transition-all duration-500 hover:scale-95 sm:h-auto sm:max-w-xs sm:rounded-lg">
                     <a
-                      href="https://whatwasntwritten.com"
+                      href="https://what-wasnt-written.netlify.app"
                       target="_blank"
                       rel="noreferrer"
                       className="group"
@@ -117,12 +117,12 @@ const Journal = () => {
                 className="text-center text-base"
               >
                 <a
-                  href="https://whatwasntwritten.com"
+                  href="https://what-wasnt-written.netlify.app"
                   target="_blank"
                   rel="noreferrer"
                   className="text-blue-400 hover:text-blue-500 hover:underline dark:text-blue-100 dark:hover:text-blue-300"
                 >
-                  whatwasntwritten.com
+                  what-wasnt-written.netlify.app
                 </a>
               </motion.p>
             </div>

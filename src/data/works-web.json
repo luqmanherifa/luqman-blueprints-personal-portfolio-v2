@@ -2,6 +2,19 @@
   {
     "id": 1,
     "category": "Web",
+    "name": "Adi Data Informatika: Attendance Management System",
+    "desc": "A system for tracking employee attendance, monitoring, approvals, history, and reports, developed with React and .NET for web.",
+    "tech1": "React",
+    "tech2": ".NET",
+    "css": "bg-red-400/10 text-red-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-red-400/40",
+    "slug": "adi-data-informatika-attendance-management-system",
+    "link": "https://github.com/luqmanherifa",
+    "live": "https://www.linkedin.com/in/luqmanherifa",
+    "images": ["/works/adidatainformatika.png"]
+  },
+  {
+    "id": 2,
+    "category": "Web",
     "name": "Jasa Raharja: Traffic Accident Monitoring",
     "desc": "A system for tracking traffic accidents, managing victim data, mapping high-risk zones, and reports, developed with React and Firebase for web.",
     "tech1": "React",
@@ -16,25 +29,6 @@
       "/works/jasaraharja-3.png",
       "/works/jasaraharja-4.png",
       "/works/jasaraharja-5.png"
-    ]
-  },
-  {
-    "id": 2,
-    "category": "Web",
-    "name": "Prokopim Sumenep: Regional Public Archive",
-    "desc": "A portal for accessing regional magazine content and publications, developed with Next and React for web.",
-    "tech1": "Next",
-    "tech2": "React",
-    "css": "bg-pink-400/10 text-pink-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-pink-400/40",
-    "slug": "prokopim-sumenep-regional-public-archive",
-    "link": "https://github.com/luqmanherifa",
-    "live": "https://www.linkedin.com/in/luqmanherifa",
-    "images": [
-      "/works/prokopim.png",
-      "/works/prokopim-2.png",
-      "/works/prokopim-3.png",
-      "/works/prokopim-4.png",
-      "/works/prokopim-5.png"
     ]
   },
   {
@@ -59,20 +53,20 @@
   {
     "id": 4,
     "category": "Web",
-    "name": "RSU Sumekar: Healthcare Management System",
-    "desc": "A system for managing hospital operations and internal workflows, developed with Vue and Express for web.",
-    "tech1": "Vue",
-    "tech2": "Express",
-    "css": "bg-teal-400/10 text-teal-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-teal-400/40",
-    "slug": "rsu-sumekar-healthcare-management-system",
+    "name": "Prokopim Sumenep: Regional Public Archive",
+    "desc": "A portal for accessing regional magazine content and publications, developed with Next and React for web.",
+    "tech1": "Next",
+    "tech2": "React",
+    "css": "bg-pink-400/10 text-pink-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-pink-400/40",
+    "slug": "prokopim-sumenep-regional-public-archive",
     "link": "https://github.com/luqmanherifa",
     "live": "https://www.linkedin.com/in/luqmanherifa",
     "images": [
-      "/works/rsusumekar1.png",
-      "/works/rsusumekar1-2.png",
-      "/works/rsusumekar1-3.png",
-      "/works/rsusumekar1-4.png",
-      "/works/rsusumekar1-5.png"
+      "/works/prokopim.png",
+      "/works/prokopim-2.png",
+      "/works/prokopim-3.png",
+      "/works/prokopim-4.png",
+      "/works/prokopim-5.png"
     ]
   },
   {
@@ -96,20 +90,21 @@
   },
   {
     "id": 6,
-    "category": "Mobile",
-    "name": "Swanify: Indonesian Spelling App",
-    "desc": "An educational app for learning Indonesian spelling with AR features, developed with C# and Unity for mobile.",
-    "tech1": "C#",
-    "tech2": "Unity",
-    "css": "bg-sky-400/10 text-sky-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-sky-400/40",
-    "slug": "swanify-indonesian-spelling-app",
-    "link": "https://github.com/luqmanherifa/swanify-indonesian-spelling-app",
-    "live": "https://bit.ly/swanify-googleplay",
+    "category": "Web",
+    "name": "RSU Sumekar: Healthcare Management System",
+    "desc": "A system for managing hospital operations and internal workflows, developed with Vue and Express for web.",
+    "tech1": "Vue",
+    "tech2": "Express",
+    "css": "bg-teal-400/10 text-teal-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-teal-400/40",
+    "slug": "rsu-sumekar-healthcare-management-system",
+    "link": "https://github.com/luqmanherifa",
+    "live": "https://www.linkedin.com/in/luqmanherifa",
     "images": [
-      "/works/swanify.png",
-      "/works/swanify-2.png",
-      "/works/swanify-3.png",
-      "/works/swanify-4.png"
+      "/works/rsusumekar1.png",
+      "/works/rsusumekar1-2.png",
+      "/works/rsusumekar1-3.png",
+      "/works/rsusumekar1-4.png",
+      "/works/rsusumekar1-5.png"
     ]
   },
   {
@@ -150,16 +145,21 @@
   },
   {
     "id": 9,
-    "category": "Web",
-    "name": "Atma Karya Teknik: Appliance & Electronics Services",
-    "desc": "A company profile website for appliance and electronic service solutions, developed with Next and React for web.",
-    "tech1": "Next",
-    "tech2": "React",
-    "css": "bg-indigo-400/10 text-indigo-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-indigo-400/40",
-    "slug": "atma-karya-teknik-appliance-electronics-services",
-    "link": "https://github.com/luqmanherifa",
-    "live": "https://www.linkedin.com/in/luqmanherifa",
-    "images": ["/works/atmakarya.png", "/works/atmakarya-2.png"]
+    "category": "Mobile",
+    "name": "Swanify: Indonesian Spelling App",
+    "desc": "An educational app for learning Indonesian spelling with AR features, developed with C# and Unity for mobile.",
+    "tech1": "C#",
+    "tech2": "Unity",
+    "css": "bg-sky-400/10 text-sky-400 dark:text-blue-100 dark:bg-blue-800 dark:border dark:border-blue-400 border border-sky-400/40",
+    "slug": "swanify-indonesian-spelling-app",
+    "link": "https://github.com/luqmanherifa/swanify-indonesian-spelling-app",
+    "live": "https://bit.ly/swanify-googleplay",
+    "images": [
+      "/works/swanify.png",
+      "/works/swanify-2.png",
+      "/works/swanify-3.png",
+      "/works/swanify-4.png"
+    ]
   },
   {
     "id": 10,
